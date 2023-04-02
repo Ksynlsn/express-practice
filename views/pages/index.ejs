@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>Welcome To Kitten Ranch LLC</h1>
+    <p>Adopt, Don't Shop!</p>
+
+    <ul>
+      <% cats.forEach(function(cats) { %>
+        <li>
+          <strong><%= cats.name %></strong>
+          representing <%= cats.coat %>,
+          born <%= cats.age %>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
